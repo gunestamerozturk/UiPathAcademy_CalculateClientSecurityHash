@@ -1,0 +1,338 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ui_Acme" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>System1_Login_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="System1_Login" sap:VirtualizedContainerService.HintSize="1320,3563" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_WorkflowName" />
+      <Variable x:TypeArguments="x:String" Name="str_Username" />
+      <Variable x:TypeArguments="ss:SecureString" Name="str_Password" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="626,3540" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Dene" sap:VirtualizedContainerService.HintSize="624,3215" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="590,3155" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Init" sap:VirtualizedContainerService.HintSize="556,784" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_WorkflowName]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["System1_Login"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[str_WorkflowName+&quot; Init-----&gt; Başladı&quot;]" />
+              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="AcmeUser" CacheStrategy="None" DisplayName="Get Credential" FolderPath="UiPathAcademy" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[str_Password]" Username="[str_Username]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[str_WorkflowName+&quot; Init-----&gt; Bitti&quot;]" />
+            </Sequence>
+            <Sequence DisplayName="Perform" sap:VirtualizedContainerService.HintSize="556,2240" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[str_WorkflowName+&quot; Perform-----&gt; Başladı&quot;]" />
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Use Application/Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522,1807" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[in_ui_Acme]" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" IsIncognito="True" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="4b13846f-c615-4edb-9800-ee980186fab9" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1676" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NCheckState DisplayName="Check App State 'Login'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1616" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4b13846f-c615-4edb-9800-ee980186fab9" Version="V5">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,877" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="4b13846f-c615-4edb-9800-ee980186fab9" Text="[str_Username]" Version="V5">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="0lggnHTy_0OPhzFlEeSxbA" DesignTimeRectangle="468, 448, 485, 34" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control ' aaname='Email:' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5cd67392-bfdd-40f1-a289-5b2196c10434" InformativeScreenshot="375bba33d409cb25496770c9b6ce3b3b.jpg" IsResponsive="True" Reference="JhyGBRX12kyf_4ZycAGGKw/4nbG1jqRe0W4B1YRniQLUQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="468, 423, 42, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' aaname='Email:' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Email:' /&gt;" Guid="55305c02-69cd-4723-b066-14777519c879" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                              <uix:NTypeInto.VerifyOptions>
+                                <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                </uix:VerifyExecutionTypeIntoOptions>
+                              </uix:NTypeInto.VerifyOptions>
+                            </uix:NTypeInto>
+                            <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  password'" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[str_Password]">
+                              <ui:TypeSecureText.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de9b9572-b3c1-4e37-8c90-62e7b58686d6" InformativeScreenshot="1f66236c538b496515e480eb0ec5f4e5" Selector="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;&lt;webctrl id='password' tag='INPUT' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeSecureText.Target>
+                            </ui:TypeSecureText>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,266" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4b13846f-c615-4edb-9800-ee980186fab9" Version="V5">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="plceSb-NXkK95aMjYU54Nw" DesignTimeRectangle="468, 612, 60, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='*Login*' /&gt;" Guid="b31794c0-e00f-4912-804e-658904a6cb44" InformativeScreenshot="31c5ecb8a2d5b62a26085d1b1b214846.jpg" Reference="JhyGBRX12kyf_4ZycAGGKw/UQCpOGUZfEWjrzKXoPKmhQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions Mode="Disappears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Target>
+                                    <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="Z4KGXEfhpkCU5wQRVGy49A" DesignTimeRectangle="468, 556, 60, 34" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" Guid="4888a5dd-1616-4b80-859f-9b4c0ba61469" InformativeScreenshot="31c5ecb8a2d5b62a26085d1b1b214846.jpg" Reference="JhyGBRX12kyf_4ZycAGGKw/ZFkh7aOprku1y4xex-arqw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                  </uix:VerifyExecutionOptions.Target>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Giriş yapıldı&quot;]" />
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login sayfası açılmadı, önceden giriş yapılmış olabilir.&quot;]" />
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="KillAllProcesses - Invoke Workflow File (Framework\KillAllProcesses.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/login" ContentHash="qKTU9_RvRkSDYHp2DLonnw" DesignTimeRectangle="398, 185, 1140, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' aaname='*Login*' /&gt;" Guid="f3824ebe-c15d-4593-9ce3-d043271aa8cc" InformativeScreenshot="d1723f6d11ce4ebc7a95ee33d6059aa9.jpg" Reference="JhyGBRX12kyf_4ZycAGGKw/OI2RfvD8P0qBzmAQdhrPUg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NCheckState.Target>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                  </ActivityFunc>
+                </uix:NApplicationCard.OCREngine>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="0, 0, 0, 0" Version="V3">
+                    <uix:TargetApp.Arguments>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Arguments>
+                    <uix:TargetApp.FilePath>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.FilePath>
+                    <uix:TargetApp.Selector>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Selector>
+                    <uix:TargetApp.Url>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Url>
+                    <uix:TargetApp.WorkingDirectory>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.WorkingDirectory>
+                  </uix:TargetApp>
+                </uix:NApplicationCard.TargetApp>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NApplicationCard>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="522,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[str_WorkflowName+&quot; Perform-----&gt; Bitti&quot;]" />
+            </Sequence>
+            <Sequence DisplayName="End" sap:VirtualizedContainerService.HintSize="556,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[str_WorkflowName+&quot; End-----&gt; Başladı&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[str_WorkflowName+&quot; End-----&gt; Bitti&quot;]" />
+            </Sequence>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="624,174" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Throw DisplayName="SE001" Exception="[new SystemException(Exception.Message.ToString+&quot;-----&gt;&quot;+str_WorkflowName)]" sap:VirtualizedContainerService.HintSize="590,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Sonunda" sap:VirtualizedContainerService.HintSize="624,25" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

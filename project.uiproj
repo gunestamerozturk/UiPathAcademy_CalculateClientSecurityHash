@@ -1,0 +1,6 @@
+{
+  "Name": "UiPathAcademy_CalculateClientSecurityHash",
+  "ProjectType": "Process",
+  "Description": "UiPath Academy REFramework eğitimi kapsamındaki Calculate Client Security Hash projesi",
+  "MainFile": "Main.xaml"
+}

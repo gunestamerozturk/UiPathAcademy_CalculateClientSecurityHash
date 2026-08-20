@@ -1,0 +1,332 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_ClientPage" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_ClientCountry" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ClientName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ClientID" Type="OutArgument(x:String)" />
+    <x:Property Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_ui_Acme" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <this:System1_ClientPage.in_ui_Acme>
+    <InArgument x:TypeArguments="ui:UiElement" />
+  </this:System1_ClientPage.in_ui_Acme>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>System1_ClientPage_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="System1_ClientPage" sap:VirtualizedContainerService.HintSize="1320,2109" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_WorkflowName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="654,2086" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Dene" sap:VirtualizedContainerService.HintSize="652,1910" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="618,1850" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Init" sap:VirtualizedContainerService.HintSize="584,57" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[str_WorkflowName]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["WorkflowName"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[str_WorkflowName+&quot; Init-----&gt; Başladı&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[str_WorkflowName+&quot; Init-----&gt; Bitti&quot;]" />
+            </Sequence>
+            <Sequence DisplayName="Perform" sap:VirtualizedContainerService.HintSize="584,1662" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[str_WorkflowName+&quot; Perform-----&gt; Başladı&quot;]" />
+              <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Use Application/Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="550,1229" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_ui_Acme]" InteractionMode="DebuggerApi" IsDisplayNameAuto="True" IsIncognito="True" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="a0c0bc07-d6ec-442f-b251-0cd1913c6e88" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,1098" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="str_VendorInformation" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NGoToUrl DisplayName="Go To URL - Client Page" sap:VirtualizedContainerService.HintSize="514,123" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="a0c0bc07-d6ec-442f-b251-0cd1913c6e88" Url="[in_Config(&quot;System1_URL&quot;).ToString+&quot;/work-items/&quot;+in_TransactionItem.SpecificContent(&quot;WIID&quot;).ToString]" Version="V5" />
+                      <uix:NCheckState DisplayName="Check App State 'Work Item Details'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="514,915" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="a0c0bc07-d6ec-442f-b251-0cd1913c6e88" Version="V5">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Hedef görünüyor" sap:VirtualizedContainerService.HintSize="512,405" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="Get Text 'Client Information'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,143" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a0c0bc07-d6ec-442f-b251-0cd1913c6e88" TextString="[str_VendorInformation]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/110508609" ContentHash="YWkH21-PgUKROhLpiJIAkQ" DesignTimeRectangle="499, 427, 373, 60" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl visibleinnertext='Client ID:*&amp;#xA;Client Name:*&amp;#xA;Client Country:*' /&gt;" Guid="78bce7eb-685c-4b49-9a53-adcad75f952a" InformativeScreenshot="9d6795588c001663297a563851cb79f1.jpg" Reference="JhyGBRX12kyf_4ZycAGGKw/4F-8DYsrSkCOB0g9HFeaag" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,202" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_VendorInformation, "(?&lt;=Client ID:\s*)\w+").Value.Trim]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[out_ClientCountry]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_VendorInformation, "(?&lt;=Client Country:\s*)[^\r\n]+").Value.Trim]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[out_ClientName]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_VendorInformation, "(?&lt;=Client Name:\s*)[^\r\n]+").Value.Trim]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Hedef görünmüyor" sap:VirtualizedContainerService.HintSize="512,174" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Throw DisplayName="S002" Exception="[new SystemException(&quot;Work Item Details sayfasına girilemedi..!&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/work-items/110729416" ContentHash="OPBznaJWvku1EtescLb-kA" DesignTimeRectangle="398, 241, 1140, 50" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='H1' aaname='                                         *Work Item Details*' /&gt;" Guid="9dcc0b0a-f82e-422f-b5fc-d8f98d8ecde8" InformativeScreenshot="c32335ef31947f9d08ee2844d1349ad5.jpg" Reference="JhyGBRX12kyf_4ZycAGGKw/S8UxPqg7s0K9dhdfaEe-6A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                        </uix:NCheckState.Target>
+                      </uix:NCheckState>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument>
+                  </ActivityFunc>
+                </uix:NApplicationCard.OCREngine>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="0, 0, 0, 0" Version="V3">
+                    <uix:TargetApp.Arguments>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Arguments>
+                    <uix:TargetApp.FilePath>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.FilePath>
+                    <uix:TargetApp.Selector>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Selector>
+                    <uix:TargetApp.Url>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.Url>
+                    <uix:TargetApp.WorkingDirectory>
+                      <InArgument x:TypeArguments="x:String" />
+                    </uix:TargetApp.WorkingDirectory>
+                  </uix:TargetApp>
+                </uix:NApplicationCard.TargetApp>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NApplicationCard>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="550,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[str_WorkflowName+&quot; Perform-----&gt; Bitti&quot;]" />
+            </Sequence>
+            <Sequence DisplayName="End" sap:VirtualizedContainerService.HintSize="584,48" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[str_WorkflowName+&quot; End-----&gt; Başladı&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[str_WorkflowName+&quot; End-----&gt; Bitti&quot;]" />
+            </Sequence>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Catch" sap:VirtualizedContainerService.HintSize="652,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Throw Exception="[new SystemException(Exception.Message.ToString+&quot;-----&gt;&quot;+str_WorkflowName)]" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence DisplayName="Sonunda" sap:VirtualizedContainerService.HintSize="652,25" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
